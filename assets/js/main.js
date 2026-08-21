@@ -319,4 +319,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setStatus('Відкрили поштову програму — надішліть готового листа.', 'ok');
   });
+
+  /* ── 9. ПЕРЕМИКАЧ ВАРІАНТІВ ОФОРМЛЕННЯ ────────────────────────
+     Тимчасовий блок на час вибору. З'являється лише коли в адресі
+     є ?theme= або ?compare — звичайний відвідувач його не бачить.
+     Коли варіант обрано, видаліть цей блок, файли assets/css/theme-*.css
+     і скрипт-завантажувач теми в <head> index.html.               */
+  const params = new URLSearchParams(location.search);
+  if (params.has('theme') || params.has('compare')) {
+    const current = params.get('theme') || 'base';
+    const variants = [
+      ['base',  'Класика'],
+      ['night', 'Ніч'],
+      ['warm',  'Затишок']
+    ];
+
+    const box = document.createElement('nav');
+    box.className = 'theme-switch';
+    box.setAttribute('aria-label', 'Варіант оформлення');
+
+    variants.forEach(([id, label]) => {
+      const a = document.createElement('a');
+      a.textContent = label;
+      a.href = id === 'base' ? '?compare=1' : `?theme=${id}`;
+      if (id === current) a.className = 'is-current';
+      box.appendChild(a);
+    });
+
+    document.body.appendChild(box);
+  }
 });

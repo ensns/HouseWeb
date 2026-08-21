@@ -25,6 +25,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- ПОРІВНЯННЯ ВАРІАНТІВ ОФОРМЛЕННЯ
+     ?theme=night — «Ніч», ?theme=warm — «Затишок», без параметра — «Класика».
+     Коли варіант обрано, приберіть: цей блок, файли assets/css/theme-*.css
+     і блок «перемикач варіантів» наприкінці main.js. -->
+<script>
+(function () {
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t !== 'night' && t !== 'warm') return;
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'assets/css/theme-' + t + '.css';
+  document.head.appendChild(l);
+})();
+</script>
 </head>
 <body>
 

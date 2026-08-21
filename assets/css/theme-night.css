@@ -1,0 +1,70 @@
+/* ══════════════════════════════════════════════════════════════
+   ВАРІАНТ ОФОРМЛЕННЯ «НІЧ»
+   Темна галерейна подача: фото світяться, текст відступає на другий план.
+   Підключається лише за адресою  index.html?theme=night
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:          #0E0D0B;
+  --surface:     #16140F;
+  --tint:        #121110;
+  --ink:         #F3EFE8;
+  --ink-soft:    #ADA598;
+  --ink-faint:   #6F675C;
+  --line:        #2B2620;
+  --accent:      #C9A96A;
+  --accent-dark: #A98B4E;
+  --dark:        #080807;
+  --dark-soft:   #080807;
+}
+
+/* ── Місця, де світлий колір був зашитий у розмітку ─────────── */
+
+.skip-link { background: var(--accent); color: #14120F; }
+
+.btn--solid { background: var(--accent); color: #14120F; }
+.btn--solid:hover { background: #F3EFE8; color: #14120F; }
+
+.hero__actions .btn--solid { background: var(--accent); color: #14120F; }
+.hero__actions .btn--solid:hover { background: #F3EFE8; color: #14120F; }
+
+.nav.is-stuck {
+  background: rgba(14,13,11,.92);
+  box-shadow: 0 1px 0 var(--line);
+}
+.nav.is-stuck .nav__brand { color: var(--ink); }
+.nav.is-stuck .nav__links a { color: var(--ink-soft); }
+.nav.is-stuck .nav__links .btn--solid { color: #14120F; }
+.nav.is-stuck .nav__burger span { background: var(--ink); }
+
+.filter.is-active { background: var(--accent); border-color: var(--accent); color: #14120F; }
+
+.field input::placeholder,
+.field textarea::placeholder { color: #6A6257; }
+
+.form__status.is-ok  { color: #7FBF97 !important; }
+.form__status.is-err { color: #E0836B !important; }
+.field.is-invalid input { border-bottom-color: #E0836B; }
+
+/* ── Характер варіанта ──────────────────────────────────────── */
+
+/* Секція-«підкладка» майже зливається з фоном — розділяємо лініями */
+.section--tint {
+  border-block: 1px solid var(--line);
+}
+
+/* Блок ціни трохи глибший за загальний фон */
+.section--dark { background: #080807; }
+
+/* Мозаїка стик у стик — знімки читаються як одна панель */
+.gallery { gap: 6px; }
+
+/* Заголовки дрібніші, з розрядкою: акцент віддано фотографіям */
+.h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); letter-spacing: .01em; }
+.hero__title { font-size: clamp(2.6rem, 7vw, 5.2rem); }
+
+/* Карта на темному тлі світить занадто різко */
+.location__map iframe { filter: brightness(.86) saturate(.85); }
+
+/* Схема поверху лишається світлою карткою — даємо їй рамку */
+.plans__image { background: #17150F; }

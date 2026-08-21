@@ -734,6 +734,38 @@ p { margin: 0 0 1.15em; color: var(--ink-soft); }
   .shot { animation: none; }
 }
 
+/* ── Перемикач варіантів оформлення (тимчасовий, на час вибору) ──
+   Кольори навмисно однакові в усіх темах: це службовий елемент.  */
+.theme-switch {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 150;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(18,17,14,.88);
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.28);
+}
+.theme-switch a {
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,.62);
+  white-space: nowrap;
+  transition: color .25s, background .25s;
+}
+.theme-switch a:hover { color: #fff; }
+.theme-switch a.is-current { background: #FBFAF8; color: #14120F; }
+
 /* ══════════════════  АДАПТИВ  ══════════════════ */
 @media (max-width: 1080px) {
   .facts__grid { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }

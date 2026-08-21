@@ -1,0 +1,78 @@
+/* ══════════════════════════════════════════════════════════════
+   ВАРІАНТ ОФОРМЛЕННЯ «ЗАТИШОК»
+   Тепла скандинавська подача: пісок і теракота, м'які скруглення,
+   заголовки без засічок. Читається як житловий дім, а не як вітрина.
+   Підключається лише за адресою  index.html?theme=warm
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:          #F7F2E9;
+  --surface:     #FFFDF8;
+  --tint:        #EDE3D3;
+  --ink:         #2E2A24;
+  --ink-soft:    #635A4C;
+  --ink-faint:   #9C9080;
+  --line:        #DFD2BE;
+  --accent:      #B4653F;
+  --accent-dark: #94502F;
+  --dark:        #2E2A24;
+  --dark-soft:   #262019;
+
+  /* Заголовки теж Inter — без засічок подача стає простішою й теплішою */
+  --font-display: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius: 14px;
+}
+
+/* ── Типографіка ────────────────────────────────────────────── */
+
+.h2, .hero__title, .plans__title, .form__title, .cta__price, .cta__owner-name {
+  font-weight: 300;
+  letter-spacing: -.022em;
+}
+.h2 { font-size: clamp(1.95rem, 4vw, 3rem); line-height: 1.14; }
+.hero__title { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.02; }
+.facts__num, .distances b, .hero__facts b { font-weight: 400; letter-spacing: -.01em; }
+
+/* ── М'які форми ────────────────────────────────────────────── */
+
+.frame,
+.shot,
+.plans__image,
+.location__map,
+.form,
+.lightbox__stage img {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.btn { border-radius: 100px; }
+.gallery { gap: 18px; }
+.nav__brand-mark { border-radius: 10px; }
+
+/* Панель заявки піднімається над фоном м'якою тінню замість контуру */
+.form {
+  box-shadow: 0 18px 44px rgba(46,42,36,.14);
+}
+
+/* ── Дрібні поправки під теплий фон ─────────────────────────── */
+
+.nav.is-stuck { background: rgba(247,242,233,.94); }
+
+.eyebrow--light { color: #E2B48F; }
+.section--dark .eyebrow { color: #E2B48F; }
+.cta__included li::before { background: #E2B48F; }
+.cta__owner-phone { color: #E2B48F; }
+
+.field input::placeholder,
+.field textarea::placeholder { color: #B9AC98; }
+
+/* Стрічка фактів стає карткою, а не смугою між лініями */
+.facts {
+  border: 0;
+  padding-block: 0;
+}
+.facts__grid {
+  background: var(--tint);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 44px) clamp(20px, 3vw, 32px);
+}
