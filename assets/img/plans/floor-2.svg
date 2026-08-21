@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-label="Схема другого поверху">
+  <style>
+    .room  { fill: #F4F1EC; stroke: #171613; stroke-width: 2.5; }
+    .outer { fill: none; stroke: #171613; stroke-width: 6; }
+    .open  { fill: #EFEAE1; stroke: #171613; stroke-width: 2.5; stroke-dasharray: 9 7; }
+    .hall  { fill: #EDE8DF; stroke: #171613; stroke-width: 2.5; }
+    .name  { font-family: Inter, "Segoe UI", sans-serif; font-size: 26px; fill: #171613; }
+    .area  { font-family: Inter, "Segoe UI", sans-serif; font-size: 20px; fill: #8B857A; }
+    .small { font-family: Inter, "Segoe UI", sans-serif; font-size: 21px; fill: #171613; }
+    .note  { font-family: Inter, "Segoe UI", sans-serif; font-size: 19px; fill: #9A9488; }
+    .tag   { font-family: Inter, "Segoe UI", sans-serif; font-size: 17px; letter-spacing: 2.4px; fill: #A8823F; }
+    .win   { stroke: #FBFAF8; stroke-width: 7; }
+    text   { text-anchor: middle; }
+  </style>
+
+  <rect width="1000" height="680" fill="#FBFAF8"/>
+
+  <!-- верхній ряд -->
+  <rect class="room" x="40"  y="60"  width="340" height="250"/>
+  <rect class="room" x="380" y="60"  width="160" height="120"/>
+  <rect class="room" x="380" y="180" width="160" height="130"/>
+  <rect class="room" x="540" y="60"  width="420" height="250"/>
+
+  <!-- хол -->
+  <rect class="hall" x="40"  y="310" width="920" height="90"/>
+
+  <!-- нижній ряд -->
+  <rect class="room" x="40"  y="400" width="340" height="200"/>
+  <rect class="room" x="380" y="400" width="240" height="200"/>
+  <rect class="room" x="620" y="400" width="160" height="200"/>
+  <rect class="open" x="780" y="400" width="180" height="200"/>
+
+  <!-- зовнішній контур -->
+  <path class="outer" d="M40 60 H960 V600 H40 Z"/>
+
+  <!-- вікна -->
+  <g class="win">
+    <line x1="110" y1="60" x2="300" y2="60"/>
+    <line x1="620" y1="60" x2="880" y2="60"/>
+    <line x1="40"  y1="130" x2="40"  y2="250"/>
+    <line x1="40"  y1="450" x2="40"  y2="550"/>
+    <line x1="120" y1="600" x2="300" y2="600"/>
+    <line x1="430" y1="600" x2="570" y2="600"/>
+    <line x1="960" y1="450" x2="960" y2="550"/>
+  </g>
+
+  <!-- підписи -->
+  <text class="name" x="210" y="178">Головна спальня</text>
+  <text class="area" x="210" y="206">24,3 м²</text>
+
+  <text class="small" x="460" y="115">Гардеробна</text>
+  <text class="area"  x="460" y="138">8,5 м²</text>
+
+  <text class="small" x="460" y="240">Ванна</text>
+  <text class="area"  x="460" y="263">9,2 м²</text>
+
+  <text class="name" x="750" y="178">Спальня 2</text>
+  <text class="area" x="750" y="206">18,1 м²</text>
+
+  <text class="small" x="500" y="352">Хол</text>
+  <text class="area"  x="500" y="375">13,5 м²</text>
+
+  <text class="name" x="210" y="492">Спальня 3</text>
+  <text class="area" x="210" y="520">16,4 м²</text>
+
+  <text class="name" x="500" y="492">Спальня 4</text>
+  <text class="area" x="500" y="520">14,7 м²</text>
+
+  <text class="small" x="700" y="492">Санвузол</text>
+  <text class="area"  x="700" y="515">7,3 м²</text>
+
+  <text class="small" x="870" y="492">Балкон</text>
+  <text class="area"  x="870" y="515">9,4 м²</text>
+
+  <text class="tag"  x="500" y="34">ДРУГИЙ ПОВЕРХ · 112 М²</text>
+  <text class="note" x="500" y="655">Схема. Балкон не входить у загальну площу.</text>
+</svg>

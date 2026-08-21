@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-label="Схема першого поверху">
+  <style>
+    .room  { fill: #F4F1EC; stroke: #171613; stroke-width: 2.5; }
+    .outer { fill: none; stroke: #171613; stroke-width: 6; }
+    .open  { fill: #EFEAE1; stroke: #171613; stroke-width: 2.5; stroke-dasharray: 9 7; }
+    .name  { font-family: Inter, "Segoe UI", sans-serif; font-size: 26px; fill: #171613; }
+    .area  { font-family: Inter, "Segoe UI", sans-serif; font-size: 20px; fill: #8B857A; }
+    .note  { font-family: Inter, "Segoe UI", sans-serif; font-size: 19px; fill: #9A9488; }
+    .tag   { font-family: Inter, "Segoe UI", sans-serif; font-size: 17px; letter-spacing: 2.4px; fill: #A8823F; }
+    .win   { stroke: #FBFAF8; stroke-width: 7; }
+    text   { text-anchor: middle; }
+  </style>
+
+  <rect width="1000" height="680" fill="#FBFAF8"/>
+
+  <!-- приміщення -->
+  <rect class="room" x="40"  y="60"  width="400" height="300"/>
+  <rect class="room" x="440" y="60"  width="300" height="300"/>
+  <rect class="room" x="740" y="60"  width="220" height="150"/>
+  <rect class="room" x="740" y="210" width="220" height="80"/>
+  <rect class="room" x="740" y="290" width="220" height="70"/>
+  <rect class="room" x="40"  y="360" width="400" height="140"/>
+  <rect class="room" x="440" y="360" width="520" height="240"/>
+  <rect class="open" x="40"  y="500" width="400" height="100"/>
+
+  <!-- зовнішній контур -->
+  <path class="outer" d="M40 60 H960 V600 H440 V500 H40 Z"/>
+
+  <!-- вікна: розриви у зовнішній стіні -->
+  <g class="win">
+    <line x1="110" y1="60" x2="240" y2="60"/>
+    <line x1="300" y1="60" x2="400" y2="60"/>
+    <line x1="500" y1="60" x2="640" y2="60"/>
+    <line x1="960" y1="100" x2="960" y2="180"/>
+    <line x1="40"  y1="150" x2="40"  y2="280"/>
+    <line x1="600" y1="600" x2="760" y2="600"/>
+  </g>
+
+  <!-- підписи -->
+  <text class="name" x="240" y="200">Вітальня</text>
+  <text class="area" x="240" y="228">34,0 м²</text>
+
+  <text class="name" x="590" y="200">Кухня-їдальня</text>
+  <text class="area" x="590" y="228">28,4 м²</text>
+
+  <text class="name" x="850" y="128">Кабінет</text>
+  <text class="area" x="850" y="154">12,6 м²</text>
+
+  <text class="name" x="850" y="245">Санвузол</text>
+  <text class="area" x="850" y="268">4,1 м²</text>
+
+  <text class="name" x="850" y="320">Технічна</text>
+  <text class="area" x="850" y="343">6,8 м²</text>
+
+  <text class="name" x="240" y="425">Хол і сходи</text>
+  <text class="area" x="240" y="453">14,2 м²</text>
+
+  <text class="name" x="700" y="475">Гараж на 2 авто</text>
+  <text class="area" x="700" y="503">27,9 м²</text>
+
+  <text class="name" x="240" y="548">Тераса</text>
+  <text class="area" x="240" y="573">21,0 м²</text>
+
+  <text class="tag"  x="500" y="34">ПЕРШИЙ ПОВЕРХ · 128 М²</text>
+  <text class="note" x="500" y="655">Схема. Точні розміри — у технічному паспорті.</text>
+</svg>
